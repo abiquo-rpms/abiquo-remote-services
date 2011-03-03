@@ -2,7 +2,7 @@
 
 Name:     abiquo-remote-services
 Version: 1.7
-Release:  10%{?dist}%{?buildstamp}
+Release:  11%{?dist}%{?buildstamp}
 Summary:  Abiquo Remote Services
 Group:    Development/System 
 License:  Multiple 
@@ -53,6 +53,9 @@ EOF
 %{abiquo_basedir}/config/examples/abiquo.properties.remoteservices
 
 %changelog
+* Thu Mar 03 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-11
+- add default storagemanager properties
+
 * Wed Jan 26 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-10
 - depend on abiquo-server-tools
 

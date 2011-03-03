@@ -13,4 +13,5 @@ abiquo.rabbitmq.host = 127.0.0.1
 abiquo.rabbitmq.port = 5672
 abiquo.rabbitmq.username = guest
 abiquo.rabbitmq.password = guest
-
+abiquo.storagemanager.netapp.user=root
+abiquo.storagemanager.netapp.password=temporal

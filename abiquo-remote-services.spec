@@ -1,8 +1,8 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-remote-services
-Version: 1.7
-Release:  11%{?dist}%{?buildstamp}
+Version: 1.7.5
+Release:  1%{?dist}
 Summary:  Abiquo Remote Services
 Group:    Development/System 
 License:  Multiple 
@@ -11,6 +11,7 @@ Source0:  README
 Source1:  abiquo.properties.remoteservices
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: abiquo-vsm abiquo-ssm abiquo-nodecollector abiquo-am abiquo-virtualfactory libvirt-client dhcp redis nfs-utils abiquo-server-tools
+BuildArch: noarch
 
 %description
 Next Generation Cloud Management Solution
@@ -53,6 +54,10 @@ EOF
 %{abiquo_basedir}/config/examples/abiquo.properties.remoteservices
 
 %changelog
+* Fri Mar 04 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-12
+- set arch to noarch
+- updated to 1.7.5
+
 * Thu Mar 03 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-11
 - add default storagemanager properties
 

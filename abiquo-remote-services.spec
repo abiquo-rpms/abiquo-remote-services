@@ -2,7 +2,7 @@
 
 Name:     abiquo-remote-services
 Version: 1.7.5
-Release:  1%{?dist}
+Release:  2%{?dist}
 Summary:  Abiquo Remote Services
 Group:    Development/System 
 License:  Multiple 
@@ -34,6 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 # Add dhcpd conf
+cp /etc/dhcpd.conf /etc/dhcpd.conf.bak
 cat > /etc/dhcpd.conf <<EOF
 ddns-update-style interim;
 
@@ -54,6 +55,10 @@ EOF
 %{abiquo_basedir}/config/examples/abiquo.properties.remoteservices
 
 %changelog
+* Thu Mar 17 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-2
+- version bump
+- backup dhcpd.conf before overwriting
+
 * Fri Mar 04 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-12
 - set arch to noarch
 - updated to 1.7.5

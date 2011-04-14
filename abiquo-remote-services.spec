@@ -1,8 +1,8 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-remote-services
-Version: 1.7.5
-Release:  3%{?dist}
+Version: 1.7.6
+Release:  1%{?dist}
 Summary:  Abiquo Remote Services
 Group:    Development/System 
 License:  Multiple 
@@ -55,6 +55,9 @@ EOF
 %{abiquo_basedir}/config/examples/abiquo.properties.remoteservices
 
 %changelog
+* Thu Apr 14 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.6-1
+- bumped version
+
 * Mon Mar 28 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-3
 - bumped release
 - remove abiquo-server-tools dep

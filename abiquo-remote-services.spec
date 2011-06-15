@@ -2,7 +2,7 @@
 
 Name:     abiquo-remote-services
 Version: 1.8
-Release:  1%{?dist}
+Release:  2%{?dist}
 Summary:  Abiquo Remote Services
 Group:    Development/System 
 License:  Multiple 
@@ -10,7 +10,7 @@ URL:      http://www.abiquo.com
 Source0:  README 
 Source1:  abiquo.properties.remoteservices
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires: abiquo-vsm abiquo-ssm abiquo-nodecollector abiquo-am abiquo-virtualfactory libvirt-client dhcp redis nfs-utils
+Requires: abiquo-vsm abiquo-ssm abiquo-nodecollector abiquo-am abiquo-virtualfactory libvirt-client dhcp redis nfs-utils OpenIPMI-tools
 BuildArch: noarch
 
 %description
@@ -55,6 +55,10 @@ EOF
 %{abiquo_basedir}/config/examples/abiquo.properties.remoteservices
 
 %changelog
+* Wed Jun 15 2011 Sergio Rubio <rubiojr@frameos.org> - 1.8-2
+- add openipmi-tools dep
+- add missing default system properties for 1.8
+
 * Tue May 31 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1
 - 1.8 bump
 

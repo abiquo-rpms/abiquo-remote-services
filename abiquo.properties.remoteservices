@@ -15,3 +15,7 @@ abiquo.rabbitmq.username = guest
 abiquo.rabbitmq.password = guest
 abiquo.storagemanager.netapp.user=root
 abiquo.storagemanager.netapp.password=temporal
+abiquo.nodecollector.timeout=60000
+abiquo.dvs.enabled = false
+abiquo.dvs.vcenter.user = ''
+abiquo.dvs.vcenter.password = ''

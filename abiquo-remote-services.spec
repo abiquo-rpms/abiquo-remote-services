@@ -1,8 +1,8 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-remote-services
-Version: 1.8
-Release:  2%{?dist}
+Version:  1.8.5
+Release:  1%{?dist}
 Summary:  Abiquo Remote Services
 Group:    Development/System 
 License:  Multiple 
@@ -55,6 +55,9 @@ EOF
 %{abiquo_basedir}/config/examples/abiquo.properties.remoteservices
 
 %changelog
+* Fri Sep 30 2011 Sergio Rubio <srubio@abiquo.com> - 1.8.5-1
+- bumped version to 1.8.5
+
 * Wed Jun 15 2011 Sergio Rubio <rubiojr@frameos.org> - 1.8-2
 - add openipmi-tools dep
 - add missing default system properties for 1.8

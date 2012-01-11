@@ -1,7 +1,7 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-remote-services
-Version:  1.8.5
+Version:  2.0
 Release:  1%{?dist}
 Summary:  Abiquo Remote Services
 Group:    Development/System 
@@ -10,7 +10,7 @@ URL:      http://www.abiquo.com
 Source0:  README 
 Source1:  abiquo.properties.remoteservices
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires: abiquo-vsm abiquo-ssm abiquo-nodecollector abiquo-am abiquo-virtualfactory libvirt-client dhcp redis nfs-utils OpenIPMI-tools
+Requires: abiquo-vsm abiquo-ssm abiquo-nodecollector abiquo-am abiquo-tarantino libvirt-client dhcp redis nfs-utils OpenIPMI-tools
 BuildArch: noarch
 
 %description
@@ -39,6 +39,8 @@ cat > /etc/dhcpd.conf <<EOF
 ddns-update-style interim;
 
 omapi-port 7911;
+option classless-static-routes code 121 = array of integer 8;
+option ms-classless-static-routes code 249 = array of integer 8;
 
 subnet 0.0.0.0 netmask 0.0.0.0 {
 	default-lease-time 60000;
@@ -55,6 +57,10 @@ EOF
 %{abiquo_basedir}/config/examples/abiquo.properties.remoteservices
 
 %changelog
+* Mon Dec 19 2011 Sergio Rubio <srubio@abiquo.com> - 2.0-1
+- bumped version to 2.0
+- remove virtualfactory dep, add tarantino dep
+
 * Fri Sep 30 2011 Sergio Rubio <srubio@abiquo.com> - 1.8.5-1
 - bumped version to 1.8.5
 
